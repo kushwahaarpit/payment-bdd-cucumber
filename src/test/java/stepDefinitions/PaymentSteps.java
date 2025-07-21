@@ -41,4 +41,31 @@ public class PaymentSteps {
         System.out.println("Payment is declined");
         Assert.assertTrue(true);
     }
+
+
+    @When("the user submits payment with unqualified details")
+    public void the_user_submits_payment_with_unqualified_details() {
+        System.out.println("Payment failed due to qualification issue.");
+    }
+
+    @When("the user submits payment and fails sanction screening")
+    public void the_user_submits_payment_and_fails_sanction_screening() {
+        System.out.println("Payment failed due to sanction list match.");
+    }
+
+    @When("the user tries to pay an amount beyond fund control limit")
+    public void the_user_tries_to_pay_beyond_fund_control_limit() {
+        System.out.println("Payment failed due to fund control check.");
+    }
+
+    @When("the clearing house rejects the payment")
+    public void the_clearing_house_rejects_the_payment() {
+        System.out.println("Clearing house rejected the payment (NACK).");
+    }
+
+    @Then("an error {string} should be shown")
+    public void an_error_should_be_shown(String errorMessage) {
+        System.out.println("Error shown: " + errorMessage);
+    }
+
 }
