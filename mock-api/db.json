@@ -1,0 +1,28 @@
+{
+  "payments": [
+    {
+      "id": 1,
+      "upiId": "test@upi",
+      "amount": 1000,
+      "status": "success"
+    },
+    {
+      "id": 2,
+      "upiId": "failengine@upi",
+      "amount": 500,
+      "status": "Payment Engine validation failed"
+    },
+    {
+      "id": 3,
+      "upiId": "nobalance@upi",
+      "amount": 20000,
+      "status": "Insufficient balance"
+    },
+    {
+      "id": 4,
+      "upiId": "clearnack@upi",
+      "amount": 900,
+      "status": "Clearing NACK from bank"
+    }
+  ]
+}
