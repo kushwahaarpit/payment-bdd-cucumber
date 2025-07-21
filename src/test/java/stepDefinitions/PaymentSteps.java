@@ -4,6 +4,10 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 public class PaymentSteps {
 
+
+    /*TODO
+       - Need to add page layout and add the elements and navigations
+    */
     @Given("the user is on the payment page")
     public void user_on_payment_page()
     {
