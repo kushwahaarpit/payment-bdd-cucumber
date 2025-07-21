@@ -25,7 +25,7 @@ This project is a real-world BDD (Behavior Driven Development) automation framew
 | Selenium        | Browser automation                   |
 | Cucumber        | BDD framework                        |
 | JUnit           | Test runner                          |
-| IntelliJ IDEA   | IDE (Community Edition is enough)    |
+| IntelliJ IDEA   | IDE                                  |
 
 ---
 
