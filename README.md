@@ -25,7 +25,7 @@ It covers end-to-end scenarios like payment success, failure, qualification erro
 
 ## ✅ Sample Scenarios Covered
 
-<<<<<<< Updated upstream
+
 | Tool            | Purpose                              |
 |-----------------|--------------------------------------|
 | Java            | Programming language                 |
@@ -40,7 +40,7 @@ It covers end-to-end scenarios like payment success, failure, qualification erro
 - ❌ Sanction Rejected
 - ❌ Fund Control Failed
 - ❌ Clearing NACK
->>>>>>> Stashed changes
+
 
 ---
 
