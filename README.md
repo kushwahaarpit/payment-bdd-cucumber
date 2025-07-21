@@ -1,23 +1,31 @@
-# 💳 BDD Cucumber Payment Transaction Automation
+# 💳 UPI Payment Transaction Automation (BDD + Selenium + API)
 
-This project is a real-world BDD (Behavior Driven Development) automation framework using **Cucumber**, **Selenium**, and **JUnit** to simulate a **payment transaction flow** (success and failure cases).
+This project automates a UPI-like payment transaction workflow using:
+- **BDD with Cucumber**
+- **UI Testing with Selenium**
+- **API Testing with RestAssured**
+- **Mock backend using json-server**
 
----
-
-## 📌 Features Covered
-
-- ✅ Successful payment with valid card
-- ❌ Declined payment with invalid card
-- ❌ Failure due to:
-  - Qualification failure
-  - Sanction screening failure
-  - Fund control failure
-  - Clearing house rejection (NACK)
+It covers end-to-end scenarios like payment success, failure, qualification errors, sanction checks, and clearing rejections.
 
 ---
 
-## 🛠 Tech Stack
+## 📦 Tech Stack
 
+- Java 11
+- Maven
+- Cucumber (Gherkin syntax)
+- JUnit
+- Selenium WebDriver
+- RestAssured (API testing)
+- json-server (Mock API server)
+- IntelliJ IDEA Community Edition
+
+---
+
+## ✅ Sample Scenarios Covered
+
+<<<<<<< Updated upstream
 | Tool            | Purpose                              |
 |-----------------|--------------------------------------|
 | Java            | Programming language                 |
@@ -26,35 +34,58 @@ This project is a real-world BDD (Behavior Driven Development) automation framew
 | Cucumber        | BDD framework                        |
 | JUnit           | Test runner                          |
 | IntelliJ IDEA   | IDE                                  |
+=======
+- ✅ Successful Payment Transaction
+- ❌ Qualification Failed
+- ❌ Sanction Rejected
+- ❌ Fund Control Failed
+- ❌ Clearing NACK
+>>>>>>> Stashed changes
 
 ---
 
-## 🚀 How to Run This Project
+## 🔌 Setup Instructions
 
-### ✅ Prerequisites
+### 1. Clone the Project
 
-- Java 11+
-- Maven installed and configured (`MAVEN_HOME`)
-- Chrome browser and [ChromeDriver](https://chromedriver.chromium.org/) added to PATH
-- IntelliJ IDEA Community Edition or higher
+```
+git clone https://github.com/kushwahaarpit/payment-bdd-cucumber.git
+cd bdd-cucumber-payment
+```
 
----
 
-### ▶️ Steps to Run
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/kushwahaarpit/payment-bdd-cucumber.git
-   cd bdd-cucumber-payment
-2. Import into IntelliJ IDEA
+### 2. Install Dependencies
 
-    Open IntelliJ → Open Project → Select the cloned folder
+Ensure Maven is installed and set up:
 
-    Make sure to enable Maven auto-import
+```
+mvn clean install
+```
 
-3. Run the test
+### 3. Start Mock API Server
 
-    Right-click on TestRunner.java → Run
+Install json-server globally:
 
-    Or from terminal:mvn test
+```
+npm install -g json-server
+```
 
+Start the mock API:
+
+```
+cd mock-api
+json-server --watch db.json --port 3000
+```
+
+API endpoint: http://localhost:3000/payments
+
+🚀 Run the Tests
+
+Run all Cucumber scenarios using Maven:
+
+```
+mvn test
+```
+
+Or run from IntelliJ by right-clicking the test runner class.
